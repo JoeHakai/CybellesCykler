@@ -8,5 +8,6 @@ namespace Entities
 {
     class BikeKind
     {
+
     }
 }
