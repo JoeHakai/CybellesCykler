@@ -46,8 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{B6197099-E5B9-451C-B040-663A7BF5870A}</Project>
+      <Project>{b6197099-e5b9-451c-b040-663a7bf5870a}</Project>
       <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{51f5ccb6-90c8-43d4-9d8a-e1e5cdd76141}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{5d7e41f7-dd3c-41a9-ac49-864247e513e9}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

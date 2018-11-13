@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class Bike
+    public class Bike
     {
         private decimal pricePerDay;
         private string bikeDescription;

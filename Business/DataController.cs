@@ -11,6 +11,14 @@ namespace Business
     {
         private DbHandler Handler;
 
+        public DataController(string connectionString)
+        {
+            this.connectionString = Handler.connectionString;
+        }
 
+        public GetEntities(string entity)
+        {
+            
+        }
     }
 }

@@ -26,13 +26,51 @@ namespace DataAccess
             catch (ArgumentException) { throw; }
             catch (InvalidOperationException) { throw; }
             catch (SqlException) { throw; }
-
-            this.connectionString = connectionString;
         }
 
         public Rentee GetRentee(int id)
         {
+            return null;
+        }
 
+        public Order GetOrder(int id)
+        {
+            return null;
+        }
+
+        public Bike GetBike(int id)
+        {
+            return null;
+        }
+
+        public bool NewRentee(Rentee rentee)
+        {
+            return false;
+        }
+
+        public bool NewOrder(Order order)
+        {
+            return false;
+        }
+
+        public bool NewBike(Bike bike)
+        {
+            return false;
+        }
+
+        public bool UpdateRentee(Rentee rentee)
+        {
+            return false;
+        }
+
+        public bool UpdateOrder(Order order)
+        {
+            return false;
+        }
+
+        public bool UpdateBike(Bike bike)
+        {
+            return false;
         }
     }
 }

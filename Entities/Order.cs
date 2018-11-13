@@ -23,9 +23,10 @@ namespace Entities
             this.id = id;
         }
 
-        public override Decimal GetPrice()
+        public Decimal GetPrice()
         {
-
+            return deliveryDate - rentDate * Bike.pricePerDay;
+            //find a way to get difference in rentDate and deliveryDate and then multiply it with pricePerDay
         }
 
         public override string ToString()

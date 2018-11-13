@@ -31,12 +31,13 @@ namespace CybellesCykler
 
         private void BtnShowBikes_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void BtnShowOrders_Click(object sender, RoutedEventArgs e)
         {
-
+            Orders appWindow = new Orders();
+            appWindow.Show();
         }
     }
 }

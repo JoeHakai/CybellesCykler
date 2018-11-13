@@ -101,9 +101,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{b6197099-e5b9-451c-b040-663a7bf5870a}</Project>
-      <Name>DataAccess</Name>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{8cc320a2-4b2a-4e6b-856b-a9bfa8720f00}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{51f5ccb6-90c8-43d4-9d8a-e1e5cdd76141}</Project>
+      <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

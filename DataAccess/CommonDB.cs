@@ -8,9 +8,9 @@ using System.Data;
 
 namespace DataAccess
 {
-    class CommonDB
+    public class CommonDB
     {
-        protected readonly string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = OrderDB; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private readonly string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = OrderDB; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public CommonDB(string connectionString)
         {
@@ -45,13 +45,12 @@ namespace DataAccess
             return ds;
         }
 
-        protected bool ExecuteNonQuery(string q)
+        protected void ExecuteNonQuery(string q)
         {
             try
             {
-                string query = "update test set name = 'john' where id = 3012" +
-                               "IF @@ROWCOUNT = 0" +
-                               "insert into test(name) values('john')";
+                string query = "INSERT INTO Renters (Name,PhoneNumber,PhysAddress,RegisterDate)" +
+                    $"VALUES('{Name}','{PhoneNumber}','{PhysAddress}','{RegisterDate})";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     {
@@ -59,14 +58,6 @@ namespace DataAccess
                         command.Connection.Open();
                         command.ExecuteNonQuery();
                     }
-                }
-                if ()
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
                 }
             }
             catch (ObjectDisposedException) { throw; }
